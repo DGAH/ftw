@@ -1,5 +1,12 @@
 <% provide(:title, "Home")  %>
-<h1>FTW App</h1>
-<p>
-	this is our home page for cookroom
-</p>
+<div class="center jumbotron">
+	<h1>欢迎来到郭老太太厨房</h1>
+
+	<h2>
+		Home page is created by Ruyi Ji.
+	</h2>
+
+	<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary"%>
+</div>
+
+<%= link_to image_tag("rails.jpg", alt: "Rails log"), 'http://rubyonrails.org/'%>
