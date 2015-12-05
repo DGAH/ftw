@@ -4,8 +4,30 @@
 jry:
   name: jry
   email: 522344221@qq.com
-  password_digest: <%= User.digest('123456')%>
+  password_digest: <%= User.digest('123456') %>
+  admin: true
 
+zhaodan:
+  name: zhaodan
+  email: 1121401574@qq.com
+  password_digest: <%= User.digest("123456") %>
+
+lana:
+  name: Lana Kane
+  email: hands@example.gov
+  password_digest: <%= User.digest('password')%>
+
+mallory:
+  name: Mallory Archer
+  email: boss@example.gov
+  password_digest: <%= User.digest('password')%>
+
+<%30.times do |n| %>
+user_<%= n %>:
+  name: <%= "User#{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password')%>
+<% end %>
 #one:
   #name: MyString
   #email: MyString
