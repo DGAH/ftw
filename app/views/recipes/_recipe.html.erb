@@ -1,0 +1,18 @@
+<li id="recipe-<%= recipe.id %>"> 
+    <%= link_to gravatar_for(recipe.user, size: 50), recipe.user %> 
+    <span class="user">
+        <%= link_to recipe.user.name, recipe.user %>
+    </span>
+    <span class="name">
+        <%= recipe.name %>
+    </span>
+    <span class="category">
+        <%= recipe.category %>
+    </span>
+    <span class="need_ingredients">
+        <%= recipe.need_ingredients %>
+    </span>
+    <span class="steps">
+        <%= recipe.steps %>
+    </span>
+</li>
