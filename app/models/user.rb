@@ -10,6 +10,11 @@ class User < ActiveRecord::Base
 	
 	#一个用户可以发布多份菜谱
 	has_many :recipes
+	
+	#实现动态流模型
+	def feed 
+		Recipe.where("user_id = ?", id) 
+	end
 
 	# 返回指定字符串的哈希摘要
 	def User.digest(string)
