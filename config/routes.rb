@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 	delete 'logout' => 'sessions#destroy'
 	
 	post 'recipes/:id' => 'recipes#details'
+	
+	get 'recipes/back' => 'recipes#back'
 
 	resources :users
 	

@@ -4,15 +4,16 @@
         <h2><%= @recipe.name %></h2>
     </div>
     <div class="recipe_details_category">
-        <h2><%= @recipe.category %></h2>
+        <h3>Category: <%= @recipe.category %></h3>
     </div>
     <div class="recipe_details_need_ingredients">
-        <h3><%= @recipe.need_ingredients %></h3>
+        <h3>Need ingredients: <%= @recipe.need_ingredients %></h3>
     </div>
     <div class="recipe_details_steps">
-        <%= @recipe.steps %>
+        <h3>Steps: <%= @recipe.steps %></h3>
     </div>
     <div class="recipe_details_user">
         <h3>Contributor: <%= @recipe.user.name %> </h3>
     </div>
+    <%= link_to "back", "back", method: :get %>
 </li>

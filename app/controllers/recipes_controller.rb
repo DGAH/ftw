@@ -26,6 +26,10 @@ class RecipesController < ApplicationController
         render 'recipes/details'
     end
     
+    def back
+        redirect_to root_url
+    end
+    
 private
     def recipe_params 
         params.require(:recipe).permit(:name, :category, :need_ingredients, :steps) 
