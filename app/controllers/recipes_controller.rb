@@ -21,9 +21,14 @@ class RecipesController < ApplicationController
         redirect_to request.referrer || root_url 
     end
     
+    def details
+        @recipe = current_user.recipes.find_by(id: params[:id])
+        render 'recipes/details'
+    end
+    
 private
     def recipe_params 
-        params.require(:recipe).permit(:name) 
+        params.require(:recipe).permit(:name, :category, :need_ingredients, :steps) 
     end
     
     def correct_user 
