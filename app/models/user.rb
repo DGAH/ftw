@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
 	validates :email, presence: true, length: {maximum: 255}, format: { with: VALID_EMAIL_REGEX }, uniqueness: {case_sensitive: false} 
 	has_secure_password
 	validates :password, length: { minimum: 6 }, allow_blank: true
+	
+	#一个用户可以发布多份菜谱
+	has_many :recipes
 
 	# 返回指定字符串的哈希摘要
 	def User.digest(string)

@@ -10,7 +10,7 @@
 	</aside>
 	<div class="col-md-8">
 		<% if @user.recipes.any? %>
-			<h3>Microposts (<%= @user.recipes.count %>)</h3>
+			<h3>Recipe (<%= @user.recipes.count %>)</h3>
 			<ol class="recipes"> 
 				<%= render @recipes %>
 			</ol>
