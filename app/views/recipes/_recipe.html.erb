@@ -15,4 +15,7 @@
     <span class="steps">
         <%= recipe.steps %>
     </span>
+    <% if current_user?(recipe.user) %> 
+        <%= link_to "delete", recipe, method: :delete, data: { confirm: "You sure?" } %> 
+    <% end %> 
 </li>
