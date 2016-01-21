@@ -1,7 +1,16 @@
 <%= form_for(@recipe) do |f| %> 
     <%= render 'shared/error_messages', object: f.object %> 
-    <div class="field"> 
-        <%= f.text_area :steps, placeholder: "Compose new recipe..." %> 
+    <div class="recipe_name">
+        <%= f.text_area :name, placeholder: "Recipe name..." %>
+    </div>
+    <div class="recipe_category">
+        <%= f.text_area :category, placeholder: "What's your recipe category?" %>
+    </div>
+    <div class="recipe_need_ingredient">
+        <%= f.text_area :need_ingredients, placeholder: "What ingredients do you need for this recipe ?" %>
+    </div>
+    <div class="recipe_steps"> 
+        <%= f.text_area :steps, placeholder: "Compose the steps here..." %> 
     </div> 
     <%= f.submit "Post", class: "btn btn-primary" %> 
 <% end %>
