@@ -13,3 +13,10 @@ two:
   need_ingredients: MyText
   steps: MyText
   user_id: 
+
+gtv: 
+  name: "He he, tsu ke ma e ta!"
+  category: "Mugen"
+  need_ingredients: "hei an ku qi"
+  steps: "Grab and roll and throw away!"
+  user: Geoniko
