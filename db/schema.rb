@@ -13,15 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160121070909) do
 
-  create_table "ingredients", force: :cascade do |t|
-    t.string   "name"
-    t.string   "family"
-    t.string   "production_area"
-    t.text     "effect"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
   create_table "recipes", force: :cascade do |t|
     t.string   "name"
     t.string   "category"
