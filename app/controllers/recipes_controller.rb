@@ -22,7 +22,11 @@ class RecipesController < ApplicationController
     end
     
     def details
-        @recipe = current_user.recipes.find_by(id: params[:id])
+        if current_user != nil
+            @recipe = current_user.recipes.find_by(id: params[:id])
+        else
+            @recipe = Recipe.find_by(id: params[:id])
+        end
         render 'recipes/details'
     end
     

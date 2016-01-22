@@ -3,6 +3,6 @@
 </div>
 <li>
     <% Recipe.take(4).each do |recipe| %>
-        <%= recipe.name %>
+        <%= link_to recipe.name, recipe, method: :post %>
     <% end %>
 </li>
