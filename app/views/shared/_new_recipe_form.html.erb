@@ -1,20 +1,17 @@
 <%= form_for(@recipe) do |f| %> 
     <%= render 'shared/error_messages', object: f.object %> 
+    <h2> 发布新菜谱 </h2>
     <div class="recipe_name">
-        <h3>菜谱名称：</h3>
-        <%= f.text_area :name, placeholder: "给您的菜谱起一个好听的名字吧！" %>
+        <%= f.text_area :name, placeholder: "名称：给您的菜谱起一个好听的名字吧！" %>
     </div>
     <div class="recipe_category">
-        <h3>菜系分类：</h3>
-        <%= f.text_area :category, placeholder: "鲁菜还是川菜？家常还是国宴？选一个分类吧！" %>
+        <%= f.text_area :category, placeholder: "分类：鲁菜还是川菜？家常还是国宴？选一个菜系分类吧！" %>
     </div>
     <div class="recipe_need_ingredient">
-        <h3>所需原料：</h3>
-        <%= f.text_area :need_ingredients, placeholder: "要想做完这道菜，需要准备什么原料呢？" %>
+        <%= f.text_area :need_ingredients, placeholder: "原料：要想做完这道菜，需要准备什么食材呢？" %>
     </div>
     <div class="recipe_steps">
-        <h3>制作步骤：</h3>
-        <%= f.text_area :steps, placeholder: "怎样才能做出如此美味的菜肴呢？" %> 
+        <%= f.text_area :steps, placeholder: "步骤：怎样才能做出如此美味的菜肴呢？" %> 
     </div> 
-    <%= f.submit "Post", class: "btn btn-primary" %> 
+    <%= f.submit "发布", class: "btn btn-primary" %> 
 <% end %>
