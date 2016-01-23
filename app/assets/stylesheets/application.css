@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+.recipe_name {
+    height: 24px;
+}
+
+.recipe_category {
+    height: 48px;
+    min-height: 24px;
+}
+
+.recipe_need_ingredient {
+    height: 48px;
+    min-height: 24px;
+}
+
+.recipe_steps {
+    height: 240px;
+    min-height: 120px;
+}

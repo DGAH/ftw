@@ -6,6 +6,10 @@ gem 'bootstrap-will_paginate'
 
 gem 'faker', '1.4.2'
 
+gem 'carrierwave', '0.10.0'
+gem 'mini_magick', '3.8.0'
+gem 'fog', '1.23.0'
+
 gem 'bcrypt', '3.1.7'
 
 gem 'bootstrap-sass', '~> 3.2.0.2'

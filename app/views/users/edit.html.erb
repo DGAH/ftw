@@ -1,24 +1,24 @@
 <% provide(:title, "Edit user") %>
-<h1>Update your profile</h1>
+<h1>更新账号信息</h1>
 
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
 		<%= form_for(@user) do |f| %>
-			<%= render 'shared/error_messages' %>
+			<%= render 'shared/error_messages', object: f.object %>
 
-			<%= f.label :name %>
+			<%= f.label :name, "用户名：" %>
 			<%= f.text_field :name, class: 'form_control' %>
 
-			<%= f.label :email %>
+			<%= f.label :email, "电子邮箱：" %>
 			<%= f.text_field :email, class: 'form_control' %>
 
-			<%= f.label :password %>
+			<%= f.label :password, "密码：" %>
 			<%= f.password_field :password, class: 'form_control' %>
 				
-			<%= f.label :password_confirmation, "Confirmation" %>
+			<%= f.label :password_confirmation, "确认密码：" %>
 			<%= f.password_field :password_confirmation, class: 'form_control' %>
 
-			<%= f.submit "Save changes", class: 'btn btn-primary' %>
+			<%= f.submit "保存更改", class: 'btn btn-primary' %>
 		<% end %>
 
 		<div class="gravatar_edit">

@@ -1,0 +1,24 @@
+<li id="recipe-<%= recipe.id %>"> 
+    <%= link_to gravatar_for(recipe.user, size: 50), recipe.user %> 
+    <span class="user">
+        <%= link_to recipe.user.name, recipe.user %>
+    </span>
+    <span class="name">
+        <%= recipe.name %>
+    </span>
+    <span class="category">
+        <%= recipe.category %>
+    </span>
+    <!--
+    <span class="need_ingredients">
+        <%= recipe.need_ingredients %>
+    </span>
+    <span class="steps">
+        <%= recipe.steps %>
+    </span>
+    -->
+    <%= link_to "详情", recipe, method: :post %>
+    <% if current_user?(recipe.user) %> 
+        <%= link_to "删除", recipe, method: :delete, data: { confirm: "您确定要删除这份菜谱吗？" } %> 
+    <% end %> 
+</li>

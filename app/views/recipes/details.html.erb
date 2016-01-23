@@ -1,0 +1,19 @@
+<% provide(:title, "Details") %>
+<li>
+    <div class="recipe_details_name">
+        <h2><%= @recipe.name %></21>
+    </div>
+    <div class="recipe_details_category">
+        <h3>菜系分类：</h3><h4><%= @recipe.category %></h4>
+    </div>
+    <div class="recipe_details_need_ingredients">
+        <h3>所需食材：</h3><h4><%= @recipe.need_ingredients %></h4>
+    </div>
+    <div class="recipe_details_steps">
+        <h3>制作步骤：</h3><j4><%= @recipe.steps %></h4>
+    </div>
+    <div class="recipe_details_user">
+        <h3>贡献者：</h3><h4><%= @recipe.user.name %> </h4>
+    </div>
+    <%= link_to "返回", "back", method: :get %>
+</li>

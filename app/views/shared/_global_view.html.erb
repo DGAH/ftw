@@ -1,0 +1,9 @@
+<hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
+<div class="hint">
+    <h3>随便逛逛：</h3>
+</div>
+<li>
+    <% Recipe.take(4).each do |recipe| %>
+        <%= link_to recipe.name, recipe, method: :post %>
+    <% end %>
+</li>
