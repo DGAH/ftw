@@ -9,14 +9,16 @@
     <span class="category">
         <%= recipe.category %>
     </span>
+    <!--
     <span class="need_ingredients">
         <%= recipe.need_ingredients %>
     </span>
     <span class="steps">
         <%= recipe.steps %>
     </span>
-    <%= link_to "details", recipe, method: :post %>
+    -->
+    <%= link_to "详情", recipe, method: :post %>
     <% if current_user?(recipe.user) %> 
-        <%= link_to "delete", recipe, method: :delete, data: { confirm: "You sure?" } %> 
+        <%= link_to "删除", recipe, method: :delete, data: { confirm: "您确定要删除这份菜谱吗？" } %> 
     <% end %> 
 </li>
